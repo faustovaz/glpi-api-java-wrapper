@@ -4,15 +4,14 @@ import org.glpi.api.item.GLPISession;
 
 public class GLPIManager {
 
-	private final GLPISession session;
+	private final GLPISession glpiSession;
 	
-	public GLPIManager(GLPISession session) {
-		super();
-		this.session = session;
+	public GLPIManager(GLPISession glpiSession) {
+		this.glpiSession = glpiSession;
 	}
 
-	public GLPISession getSession() {
-		return session;
+	public void killSession() {
+		this.glpiSession.killSession();
 	}
 	
 }

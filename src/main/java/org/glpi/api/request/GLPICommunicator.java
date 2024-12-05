@@ -25,7 +25,7 @@ public class GLPICommunicator {
 		this.headers.put(header, value);
 	}
 	
-	public HttpResponse<String> getAsString(String path) throws URISyntaxException, IOException, InterruptedException {
+	public HttpResponse<String> getAsString(String path) {
 		return this.getAsString(path, Map.of());
 	}
 	

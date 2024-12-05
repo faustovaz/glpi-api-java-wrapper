@@ -1,6 +1,7 @@
 package org.glpi.api;
 
 import org.glpi.api.item.GLPISession;
+import org.glpi.api.manager.ItilCategoryManager;
 
 public class GLPIManager {
 
@@ -12,6 +13,10 @@ public class GLPIManager {
 
 	public void killSession() {
 		this.glpiSession.killSession();
+	}
+	
+	public ItilCategoryManager getItilCategoryManager() {
+		return new ItilCategoryManager(this.glpiSession);
 	}
 	
 }
